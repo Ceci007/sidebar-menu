@@ -13,7 +13,7 @@
   --sidebar-color: #FFF;
   --primary-color: #695CFE;
   --primary-color-light: #F6F5FF;
-  --togle-color: #DDD;
+  --toggle-color: #DDD;
   --text-color: #707070;
 
   /* Transition */
@@ -176,10 +176,57 @@ header .image-text .header-text {
   transition: var(--tran-02);
 }
 
-.sidebar .menubar {
-  background: dodgerblue !important;
+.sidebar .menu-bar {
   height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.menu-bar .mode {
+  background: var(--primary-color-light);
+}
+
+.menu-bar .mode .moon-sun {
+  height: 50px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-bar .mode .mode-icon {
+  position: absolute;
+}
+
+.menu-bar .mode .sun {
+  opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 60px; 
+  cursor: pointer;
+}
+
+.toggle-switch .switch {
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background: var(--toggle-color);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background: var(--sidebar-color);
 }
